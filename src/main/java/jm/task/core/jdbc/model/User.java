@@ -1,12 +1,11 @@
 package jm.task.core.jdbc.model;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
+@Entity (name = "users") //Имя таблицы помечается именно в Entity для корректного мапинга
 @Table
 public class User {
-    @Id
+    @Id @Column @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
