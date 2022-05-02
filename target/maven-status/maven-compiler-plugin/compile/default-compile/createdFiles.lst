@@ -1,3 +1,4 @@
+jm\task\core\jdbc\util\HibernateUtil.class
 jm\task\core\jdbc\dao\UserDaoJDBCImpl.class
 jm\task\core\jdbc\Main.class
 jm\task\core\jdbc\dao\UserDaoHibernateImpl.class
