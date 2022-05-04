@@ -10,12 +10,11 @@ import java.util.Properties;
 
 public class Util {
 
+    public static final SessionFactory hibernateSessionFactory;
+    public static Connection connection;
     private static final String USER_NAME = "root";
     private static final String PASSWORD = "root";
     private static final String URL = "jdbc:mysql://127.0.0.1:3306/kata_test";
-    private static final SessionFactory hibernateSessionFactory;
-    private static Connection connection;
-
 
     private Util() {
         throw new IllegalStateException("Utility class");
@@ -47,13 +46,15 @@ public class Util {
                 .buildSessionFactory();
     }
 
-    public static Connection getConnection() {
+    //Вариант с геттером JDBC
+    /*public static Connection getConnection() {
         return connection;
-    }
+    }*/
 
-    public static SessionFactory getHibernateSessionFactory() {
+    //Вариант с геттером Hibernate
+    /*public static SessionFactory getHibernateSessionFactory() {
         return hibernateSessionFactory;
-    }
+    }*/
 
     //Вариант с методом для отдельного соединения JDBC для каждого запроса (трансзакции)
     /*public static Connection getConnection() {
